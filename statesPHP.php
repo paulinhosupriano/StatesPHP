@@ -1,5 +1,7 @@
+<?php
+
 class statesPHP{
-  public static $estados = array(
+  private static $states = array(
       'AC' => 'Acre',
       'AL' => 'Alagoas',
       'AP' => 'Amapá',
@@ -28,5 +30,13 @@ class statesPHP{
       'SE' => 'Sergipe',
       'TO' => 'Tocantins',
     );
+  
+  public static function getStates(){
+      return self::$states;
+  }
+  
+  public static function getStatesAcronyms(){
+    return array_keys(self::$states);
+  }
 
 }
